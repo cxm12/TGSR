@@ -1,0 +1,32 @@
+CONFIG_NAME: ''
+
+METHOD: 'S8'
+
+TREE:
+    BRANCH_NUM: 4  # 3:scale 4; 4:scale 8; 5:scale16;
+    BASE_SIZE: 32
+
+
+DATASET_NAME: 'face'
+DATA_DIR: '../data/face'
+DATA_DIRIM: '../data/face'
+GPU_ID: 0
+WORKERS: 1
+B_VALIDATION: True
+
+TRAIN:
+    FLAG: False
+    NET_G: '../output/face/S8/face_S8/Model/netG_epoch_7.pth'
+    B_NET_D: True
+    BATCH_SIZE: 1
+    NET_E: '../DAMSMencoders/facewords/text_encoder200.pth'
+
+GAN:
+    DF_DIM: 64
+    GF_DIM: 32
+    Z_DIM: 100
+    R_NUM: 2
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 1

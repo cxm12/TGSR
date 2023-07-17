@@ -1,0 +1,31 @@
+CONFIG_NAME: ''
+
+METHOD: 'S8'
+
+TREE:
+    BRANCH_NUM: 4
+    BASE_SIZE: 32
+
+
+DATASET_NAME: 'birds'
+DATA_DIR: '../data/birds'
+GPU_ID: 0
+WORKERS: 1
+
+TRAIN:
+    FLAG: False
+    NET_G: ''
+    B_NET_D: True
+    BATCH_SIZE: 1
+    NET_E: '../DAMSMencoders/bird/text_encoder200.pth'
+
+
+GAN:
+    DF_DIM: 64
+    GF_DIM: 32
+    Z_DIM: 100
+    R_NUM: 2
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 10
